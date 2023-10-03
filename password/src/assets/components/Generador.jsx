@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PalabraGenerada from './PalabraGenerada';
 
 
@@ -16,7 +16,17 @@ import ContraInsegura from './Contra_insegura';
 
 export default function Generador() {
     
-const [valorrange, setvalorrange] = useState(0);
+const [valorrange, setvalorrange] = useState(50);
+
+
+const handlerange = (event) => {
+  let newValue = event.target.value;
+  if (newValue <= 0) {
+    newValue = 1; // Evita que el valor sea menor o igual a 0
+  }
+  setvalorrange(newValue);
+};
+
 
 
 
@@ -59,6 +69,21 @@ const [ischecked1, setischecked1] = useState(false)
 const [ischecked2, setischecked2] = useState(false)
 const [ischecked3, setischecked3] = useState(false)
 const [ischecked4, setischecked4] = useState(true)
+
+
+
+
+useEffect(() => {
+ 
+if(ischecked1 == false && ischecked2 == false && ischecked3 == false && ischecked4 == false){
+  setischecked4(true);
+}
+
+}, [ischecked1, ischecked2, ischecked3, ischecked4])
+
+
+
+
 
 
 
@@ -146,7 +171,7 @@ let handle2 = () => {
 
 <div className="cont_longitud">
     <h4>Longitud de la contraseña: {valorrange}</h4>
-    <input onChange={valinput} className=' form-range  input'  type="range" name="" id="" />
+    <input onChange={handlerange} className=' form-range  input'  type="range" name="" id="" />
  
 </div>
 
@@ -161,10 +186,10 @@ let handle2 = () => {
 
 <div className="checks">
 
-<input className='form-check-input'  type="checkbox" checked={ischecked1} onChange={handle1} /> <label htmlFor="">abc</label>
-    <input className='form-check-input'  type="checkbox" checked={ischecked2} onChange={handle2} /> <label htmlFor="">123</label>
-    <input className='form-check-input'  type="checkbox" checked={ischecked3} onChange={handle3} /> <label htmlFor="">#$&</label>
-    <input className='form-check-input'  type="checkbox" checked={ischecked4} onChange={handle4} /> <label htmlFor="">ABC</label>
+<input className='form-check-input chk1 '  type="checkbox" checked={ischecked1} onChange={handle1} /> <label htmlFor="">abc</label>
+    <input className='form-check-input chk2'  type="checkbox" checked={ischecked2} onChange={handle2} /> <label htmlFor="">123</label>
+    <input className='form-check-input chk3'  type="checkbox" checked={ischecked3} onChange={handle3} /> <label htmlFor="">#$&</label>
+    <input className='form-check-input chk4'  type="checkbox" checked={ischecked4} onChange={handle4} /> <label htmlFor="">ABC</label>
 </div>
 
 </div>

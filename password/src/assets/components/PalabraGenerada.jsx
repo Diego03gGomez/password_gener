@@ -85,7 +85,7 @@ let copiar_portapapeles = () => {
 </div>
 
 <div className="cont_boton_copiar">
-<button className='btn_copiar'  onClick={copiar_portapapeles}  >COPIAR</button>
+<button className='btn_copiar'  onClick={copiar_portapapeles}  >Copiar <i class="fa-regular fa-copy"></i></button>
             
 
 </div>
