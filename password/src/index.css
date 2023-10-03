@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+/*background-image: url(https://static3.avast.com/20001427/web/i/v2/components/bg/bg-faint-orange.svg);*/
+background-size: cover;
+
+background-position: center;
+
+
+font-family: 'Fira Sans', sans-serif;
+/*font-family: 'Inter', sans-serif;*/
+
+
+
+
+/*font-family: 'Mulish', sans-serif;*/
+/*font-family: 'Nunito', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+
+
+
+
+
+}
+
+.boton_seguro{
+  border-radius: 10px;
+  border-style: solid;
+  width: 29%;
+}
+
+
+
+.rojo{
+  background-color: #f5203e;
+  color: white;
+  border-color: #f5203e;
+}
+
+.amarillo{
+  color: white;
+  background-color: #f1c80b;
+  border-color: #f1c80b;
+}
+
+.verde{
+  color: white;
+  background-color: #43ed9c;
+  border-color: #43ed9c;
+}
+
+.azul{
+  color: white;
+  background-color: #0070f6;
+  border-color: #0070f6;
+}
+
+
+.eliminar{
+  display: none;
+}
+
+
+.mostrar{
+  display: initial;
+}
+
+.cont_imagen{
+ /* background-color: red;*/
+  text-align: center;
+}
+
+.cont_imagen img{
+  width: 100%;
+  height: 400px;
+}
+
+.palabra_generada{
+ /*word-wrap: break-word;*/
+ white-space: nowrap; /* Evita el ajuste automático del texto a varias líneas */
+ overflow: hidden;    /* Oculta el exceso de texto */
+ text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto oculto */
+ width: 400px; /* Esta
+}
+
+
+.cont_longitud{
+  margin: 10px 0;
+ /* background-color: red;*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.row{
+  align-items: center;
+}
+
+.btn_copiar{
+  background-color: #0070f6;
+  border-color: #0070f6;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.cont_checks{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.checks{
+  display: flex;
+  gap: 10px;
+  
+}
+header{
+  background-color: #0070f6;
+  background-color: #536DFE;
+  padding: 10px;
+}
+
+.cont_header{
+ 
+  margin: auto;
+  width: 90%;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.cont_todo{
+  margin-top: 100px;
+}
+
+.cont_contraseña{
+/*  background-color: red;*/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 2em;
+  padding: 10px 10px;
+  align-items: center;
+  border-width: 1px;
+}
+
+.titulo{
+ /* background-color: red;*/
+  margin:auto;
+
+  margin-bottom: -100px;
+  width: 90%;
+  text-align: center;
+}
+
+#fondo_titulo{
+  padding: 20px;
+}
+
+.titulo{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+@media (max-width:1024px){
+.cont_contraseña{
+  gap: 20px;
+}
+
+.titulo{
+  margin-top: 0;
+}
+
+}
+
+
+@media (max-width:900px){
+
+.cont_longitud{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.cont_checks{
+  justify-content: space-around;
+}
+
+.cont_boton button{
+  width: 100%;
+}
+
+.cont_boton{
+  margin:10px auto;
+  width: 200px;
+  
+}
+
+
+
+}
+
+
+
+
+@media (max-width: 500px){
+
+.cont_checks{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 10px;
+}
+
+.checks{
+  justify-content: center;
+}
+
+
+}
