@@ -8,6 +8,9 @@ const PalabraGenerada = (props) => {
 
 
 
+
+
+
 /*FUNCION PARA PASAR LA LONGTUD AL ELEMENTO*/
 let generar_palabra_Aleatoria = (longitud) => {
 
@@ -48,9 +51,11 @@ if(props.chk4){
       const indice_aleatorio = Math.floor(Math.random() * caracteres.length);
       palabra_aleatoria += caracteres.charAt(indice_aleatorio); 
     }
-    
+
+
+   
     return palabra_aleatoria;
-    
+  
     
     }
 
@@ -58,8 +63,15 @@ if(props.chk4){
 let copiar_portapapeles = () => {
     let elemento = document.querySelector(".palabra_copiar");
     let textoacopiar = elemento.textContent;
+
+   
     navigator.clipboard.writeText(textoacopiar)
-    .then(() => alert ("Texto Copiado:" + textoacopiar))
+    .then(() =>{
+    alert ("Texto Copiado:" + textoacopiar)
+
+   
+    
+})
     .catch(error=> console.error("Error al copiar", error));
 }
 
@@ -73,10 +85,23 @@ let copiar_portapapeles = () => {
 
     return (
         <div>
+<div className="fondofondo">
+<div className="fondo_oscuro">
+  <div className="cont_fondo">
+<div className="cont_tilde">
+  <i class="fa-solid fa-circle-check icono"></i>
+</div>
+<h1>Contraseña Copiada</h1>
 
 
+  </div>
+</div>
 
-<div className="cont_contraseña">
+
+</div>
+
+
+<div className="cont_contraseña border_blanco">
 
 <div className="palabra_generada">
 
@@ -85,7 +110,7 @@ let copiar_portapapeles = () => {
 </div>
 
 <div className="cont_boton_copiar">
-<button className='btn_copiar'  onClick={copiar_portapapeles}  >Copiar <i class="fa-regular fa-copy"></i></button>
+<button className='btn_copiar violeta'  onClick={copiar_portapapeles}  >Copiar <i class="fa-regular fa-copy"></i></button>
             
 
 </div>

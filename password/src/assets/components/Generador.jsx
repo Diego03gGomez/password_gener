@@ -163,6 +163,9 @@ let handle2 = () => {
         
 
 <div className=" col-lg-6  cont_opciones">
+
+
+
 <PalabraGenerada longitud={valorrange} chk1={ischecked1} chk2={ischecked2} chk3={ischecked3} chk4={ischecked4} ></PalabraGenerada>
 <ContraInsegura  long={valorrange}  ></ContraInsegura>
 
