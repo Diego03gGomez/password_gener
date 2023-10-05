@@ -339,7 +339,7 @@ span{
 
 
 
-@media (max-width:1024px){
+@media (max-width:1124px){
 .cont_contraseña{
   gap: 20px;
 }
@@ -354,7 +354,8 @@ span{
 }
 
 .row{
-  margin-top: -18px;
+ /*background-color: red;*/
+ margin-top: -48px;
 }
 
 
