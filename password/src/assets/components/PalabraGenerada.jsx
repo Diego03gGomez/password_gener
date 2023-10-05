@@ -67,7 +67,7 @@ let copiar_portapapeles = () => {
    
     navigator.clipboard.writeText(textoacopiar)
     .then(() =>{
-    alert ("Texto Copiado:" + textoacopiar)
+   /* alert ("Texto Copiado:" + textoacopiar)*/
 
    
     

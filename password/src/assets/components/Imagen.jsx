@@ -18,7 +18,7 @@ useEffect(() => {
         setimgclass1('');
         setimgclass2('eliminar');
         setimgclass3('eliminar');
-    } else if (props.longitud2 > 8 && props.longitud2 <= 20){
+    } else if (props.longitud2 > 11 && props.longitud2 <= 20){
         setimgclass1('eliminar');
         setimgclass2('');
         setimgclass3('eliminar')

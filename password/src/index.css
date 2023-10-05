@@ -96,6 +96,7 @@ font-family: 'Fira Sans', sans-serif;
 .cont_imagen img{
   width: 100%;
   height: 400px;
+  filter: hue-rotate(-13deg);
 }
 
 .palabra_generada{
